@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourTigranmods — Официальный генератор ключей DRIP CLIENT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-fire"></i></div>
+                <h1 class="logo-text">YourTigranmods</h1>
+            </div>
+            <nav class="nav">
+                <a href="#generate" class="nav-link active"><i class="fas fa-key"></i> Генератор</a>
+                <a href="#info" class="nav-link"><i class="fas fa-info-circle"></i> Инфо</a>
+                <a href="#contacts" class="nav-link"><i class="fas fa-address-book"></i> Контакты</a>
+                <a href="admin.html" class="nav-link admin"><i class="fas fa-crown"></i> Админ</a>
+            </nav>
+        </header>
 
+        <main class="main-content">
+            <section id="generate" class="section active">
+                <h2 class="section-title"><i class="fas fa-bolt"></i> Генератор ключей DRIP CLIENT MOBILE</h2>
+                <p class="section-subtitle">Введите ваш User ID чтобы получить уникальный ключ доступа</p>
+                
+                <div class="generator-card">
+                    <div class="input-group">
+                        <label for="userID"><i class="fas fa-user-secret"></i> User ID</label>
+                        <input type="text" id="userID" placeholder="Например: 542817639" maxlength="32">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="userEmail"><i class="fas fa-envelope"></i> Email (опционально)</label>
+                        <input type="email" id="userEmail" placeholder="Ваш email для уведомлений">
+                    </div>
+                    
+                    <button id="generateBtn" class="generate-btn">
+                        <i class="fas fa-hammer"></i> СГЕНЕРИРОВАТЬ КЛЮЧ
+                    </button>
+                    
+                    <div class="result-area">
+                        <div id="loading" class="hidden">
+                            <div class="spinner"></div>
+                            <p>Генерация ключа...</p>
+                        </div>
+                        
+                        <div id="result" class="hidden">
+                            <h3><i class="fas fa-gem"></i> Ваш ключ:</h3>
+                            <div class="key-display" id="generatedKey">CreatedYourTigranmods-XXXXXXXXXX</div>
+                            <div class="key-actions">
+                                <button id="copyBtn" class="action-btn copy"><i class="far fa-copy"></i> Скопировать</button>
+                                <button id="saveBtn" class="action-btn save"><i class="far fa-save"></i> Сохранить</button>
+                                <button id="shareBtn" class="action-btn share"><i class="fas fa-share-alt"></i> Поделиться</button>
+                            </div>
+                            <p class="key-note"><i class="fas fa-clock"></i> Ключ действителен 24 часа. 1 ключ на User ID в сутки.</p>
+                        </div>
+                        
+                        <div id="error" class="hidden error-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p id="errorText">Ошибка</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="info" class="section hidden">
+                <h2 class="section-title"><i class="fas fa-book"></i> Информация</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-code"></i></div>
+                        <h3>Формат ключа</h3>
+                        <p>Ключ генерируется в формате: <strong>CreatedYourTigranmods-10цифр</strong>. Пример: CreatedYourTigranmods-7583924610</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Безопасность</h3>
+                        <p>Каждый ключ привязан к User ID. Не передавайте ключ третьим лицам.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-sync-alt"></i></div>
+                        <h3>Обновление</h3>
+                        <p>Новый ключ можно получить через 24 часа после предыдущей генерации.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Поддержка</h3>
+                        <p>При проблемах с ключом обращайтесь в Telegram-поддержку.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacts" class="section hidden">
+                <h2 class="section-title"><i class="fas fa-comments"></i> Контакты и поддержка</h2>
+                <div class="contacts-container">
+                    <div class="contact-list">
+                        <a href="https://t.me/YourTigranmods" target="_blank" class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram (DM): @YourTigranmods</span>
+                        </a>
+                        <a href="mailto:mirzoyantigran61@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email: mirzoyantigran61@gmail.com</span>
+                        </a>
+                        <a href="https://t.me/+UgFuGscCDNk2MzIy" target="_blank" class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram группа</span>
+                        </a>
+                        <a href="https://t.me/speedmak1" target="_blank" class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram: @speedmak1</span>
+                        </a>
+                        <a href="https://www.facebook.com/share/1Ad1TYM8gw/" target="_blank" class="contact-item">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://x.com/GaroGaro756421" target="_blank" class="contact-item">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter: @GaroGaro756421</span>
+                        </a>
+                        <a href="https://vk.ru/id1088377235" target="_blank" class="contact-item">
+                            <i class="fab fa-vk"></i>
+                            <span>ВКонтакте</span>
+                        </a>
+                        <a href="https://youtube.com/@speedmak01" target="_blank" class="contact-item">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube: @speedmak01</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2023 YourTigranmods — Официальный генератор ключей DRIP CLIENT MOBILE. Не аффилирован с Garena Free Fire.</p>
+            <p class="disclaimer">Это демо-версия. Полная версия с PHP бэкендом доступна по запросу.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
