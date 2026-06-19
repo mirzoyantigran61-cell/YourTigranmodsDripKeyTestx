@@ -20,13 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Key generation
+    // ================== KEY GENERATION ==================
     const generateBtn = document.getElementById('generateBtn');
     const userIDInput = document.getElementById('userID');
     const loadingDiv = document.getElementById('loading');
     const resultDiv = document.getElementById('result');
     const errorDiv = document.getElementById('error');
     const generatedKeySpan = document.getElementById('generatedKey');
+    
+    // ----- ЖЁСТКО ПРОПИСАННЫЕ КЛЮЧИ (можно менять/дополнять) -----
+    const PRESET_KEYS = [
+        "CreatedYourTigranmods-7583924610",
+        "CreatedYourTigranmods-4829103756",
+        "CreatedYourTigranmods-9372610485"
+    ];
     
     generateBtn.addEventListener('click', async function() {
         const userID = userIDInput.value.trim();
@@ -54,9 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             loadingDiv.classList.add('hidden');
             
-            // Generate key
-            const digits = Math.floor(1000000000 + Math.random() * 9000000000);
-            const key = `CreatedYourTigranmods-${digits}`;
+            // Получаем текущий счётчик генераций (сохраняется в браузере)
+            let count = parseInt(localStorage.getItem('keyGenCount') || '0');
+            const key = PRESET_KEYS[count % PRESET_KEYS.length];
+            localStorage.setItem('keyGenCount', count + 1);
             
             // Display result
             generatedKeySpan.textContent = key;
